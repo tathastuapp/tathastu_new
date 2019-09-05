@@ -1,0 +1,93 @@
+{
+  "project_info": {
+    "project_number": "1025696320336",
+    "firebase_url": "https://tathastu-city-app.firebaseio.com",
+    "project_id": "tathastu-city-app",
+    "storage_bucket": "tathastu-city-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1025696320336:android:b84dfedc5d1159fd2afa55",
+        "android_client_info": {
+          "package_name": "app.tathastu.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1025696320336-0qkg0lck5904rm1ons0d0r3lg7banpo9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.tathastu.android",
+            "certificate_hash": "591589916a482dfdb8d26db4d6498838c88b6316"
+          }
+        },
+        {
+          "client_id": "1025696320336-0njg1ujsepphddt1oqi64c3cs7dnoo34.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6DK358y-oqJUTBvJ7ayhJ888uNf7Wijg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1025696320336-0njg1ujsepphddt1oqi64c3cs7dnoo34.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1025696320336:android:9f5346610446aecc",
+        "android_client_info": {
+          "package_name": "in.tathastuapp.tathastu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1025696320336-bc5ve0gcf4i2b4uorufvgkkuhhqnq0pp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.tathastuapp.tathastu",
+            "certificate_hash": "591589916a482dfdb8d26db4d6498838c88b6316"
+          }
+        },
+        {
+          "client_id": "1025696320336-aacq2lu23i22rndavvueb0fcba3gsfhe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.tathastuapp.tathastu",
+            "certificate_hash": "0659a65a2ac47283c215c54e28c9f42c4f1be90c"
+          }
+        },
+        {
+          "client_id": "1025696320336-0njg1ujsepphddt1oqi64c3cs7dnoo34.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6DK358y-oqJUTBvJ7ayhJ888uNf7Wijg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1025696320336-0njg1ujsepphddt1oqi64c3cs7dnoo34.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
