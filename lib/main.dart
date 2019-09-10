@@ -7,6 +7,7 @@ import 'package:tathastu/pages/login/user_details_page.dart';
 import 'package:tathastu/pages/login/verify_code_page.dart';
 import 'package:tathastu/pages/login/verify_phone_page.dart';
 import 'package:tathastu/services/auth_service.dart';
+import 'package:tathastu/services/data_update_service.dart';
 import 'package:tathastu/services/product_service.dart';
 
 void main() => runApp(TathastuApp());
@@ -45,9 +46,9 @@ class _TathastuAppState extends State<TathastuApp> {
           ChangeNotifierProvider<ProductService>(
             builder: (context) => ProductService.instance(),
           ),
-          // ChangeNotifierProvider<CartService>(
-          //   builder: (context) => CartService.instance(),
-          // ),
+          ChangeNotifierProvider<DataUpdateService>(
+            builder: (context) => DataUpdateService.instance(),
+          ),
         ],
         child: MaterialApp(
           title: 'Tathastu',
@@ -75,7 +76,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
     Future.delayed(Duration(seconds: 3), () {
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => InitialPage()));
+          context, MaterialPageRoute(builder: (context) => HomePage()));
     });
   }
 

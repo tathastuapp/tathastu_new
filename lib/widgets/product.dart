@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:tathastu/services/data_update_service.dart';
 // import 'package:tathastu/services/cart_service.dart';
 import 'package:tathastu/services/product_service.dart';
 import 'package:tathastu/shared/unit_converter.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 class ProductWidget extends StatefulWidget {
-  final DocumentSnapshot documentSnapshot;
+  final ProductDetail productDetail;
 
-  const ProductWidget({Key key, this.documentSnapshot}) : super(key: key);
+  const ProductWidget({Key key, this.productDetail}) : super(key: key);
   @override
   _ProductWidgetState createState() => _ProductWidgetState();
 }
@@ -27,6 +28,7 @@ class _ProductWidgetState extends State<ProductWidget> {
   String gujaratiName;
   String productType;
   bool isOrganic;
+  bool isAvailable;
   num minimumQuantity;
   num minimumQuantityPrice;
   Map<String, dynamic> productData;
@@ -34,16 +36,17 @@ class _ProductWidgetState extends State<ProductWidget> {
   @override
   void initState() {
     super.initState();
-    productId = widget.documentSnapshot.documentID;
-    productData = widget.documentSnapshot.data;
-    photoUrl = widget.documentSnapshot.data['photo_url'];
-    englishName = widget.documentSnapshot.data['english_name'];
-    gujaratiName = widget.documentSnapshot.data['gujarati_name'];
-    productType = widget.documentSnapshot.data['product_type'];
-    isOrganic = widget.documentSnapshot.data['is_organic'];
-    minimumQuantity = widget.documentSnapshot.data['min_quantity'];
-    minimumQuantityUnit = widget.documentSnapshot.data['min_quantity_unit'];
-    minimumQuantityPrice = widget.documentSnapshot.data['min_quantity_price'];
+    productId = widget.productDetail.id;
+    // productData = widget.productDetail;
+    photoUrl = widget.productDetail.photoUrl;
+    englishName = widget.productDetail.englishName;
+    gujaratiName = widget.productDetail.gujaratiName;
+    productType = widget.productDetail.type;
+    isOrganic = widget.productDetail.isOrganic;
+    minimumQuantity = widget.productDetail.minimumQuantity;
+    minimumQuantityUnit = widget.productDetail.minimumQuantityUnit;
+    minimumQuantityPrice = widget.productDetail.pricePerKg;
+    isAvailable = widget.productDetail.isAvailable;
   }
 
   @override

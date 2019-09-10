@@ -2,9 +2,10 @@ import 'package:badges/badges.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:tathastu/pages/profile/profile_page.dart';
+import 'package:tathastu/services/data_update_service.dart';
 import 'package:tathastu/services/user_service.dart';
 import 'package:tathastu/widgets/product_list.dart';
-
+import 'package:provider/provider.dart';
 class HomePage extends StatefulWidget {
   final UserModel user;
 
@@ -19,7 +20,7 @@ class _HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context) {
     // CartService cartService = Provider.of<CartService>(context);
-
+  DataUpdateService dataUpdateService = Provider.of<DataUpdateService>(context);
     return SafeArea(
       child: DefaultTabController(
         length: 3,
@@ -46,17 +47,22 @@ class _HomePageState extends State<HomePage>
               ),
             ),
             actions: <Widget>[
-              Container(
-                padding: EdgeInsets.all(8.0),
-                margin: EdgeInsets.all(8.0),
-                child: Badge(
-                  badgeContent:
-                      Text('5', style: TextStyle(color: Colors.black)),
-                  badgeColor: Colors.yellow,
-                  child: Icon(
-                    Icons.notifications,
-                    color: Theme.of(context).primaryColor, 
-                    size: 32.0,
+              InkWell(
+                onTap: (){
+                  dataUpdateService.getProductDetails();
+                },
+                              child: Container(
+                  padding: EdgeInsets.all(8.0),
+                  margin: EdgeInsets.all(8.0),
+                  child: Badge(
+                    badgeContent:
+                        Text('5', style: TextStyle(color: Colors.black)),
+                    badgeColor: Colors.yellow,
+                    child: Icon(
+                      Icons.notifications,
+                      color: Theme.of(context).primaryColor, 
+                      size: 32.0,
+                    ),
                   ),
                 ),
               ),
